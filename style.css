@@ -180,11 +180,9 @@ section {
 
 article {
     border-radius: 3px;
-
-    box-shadow: -webkit-box-shadow: 2px 2px 6px 4px rgba(199, 197, 199, 1);
-    -moz-box-shadow: 2px 2px 6px 4px rgba(199, 197, 199, 1);
-    box-shadow: 2px 2px 6px 4px rgba(199, 197, 199, 1);
-
+-webkit-box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
+-moz-box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
+box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
 }
 
 .lifechangecard {
