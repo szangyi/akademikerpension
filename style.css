@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
 }
 
@@ -47,7 +47,7 @@ button.login {
 }
 
 .nav1 {
-padding: 0.5vw 5vw;
+    padding: 0.5vw 5vw;
     display: grid;
     grid-template-columns: 3fr 2fr;
     align-items: center;
@@ -64,7 +64,7 @@ padding: 0.5vw 5vw;
 }
 
 .nav2 {
-        font-size: 1.2vw;
+    font-size: 1.2vw;
     border-top: 1px solid #CBCBCB;
     border-bottom: 1px solid #CBCBCB;
 
@@ -129,7 +129,7 @@ h1 {
     font-size: 1.5vw;
 }
 
-h2 {
+h5 {
     margin: 0;
     font-family: var(--secondary-font);
     padding-right: 1vw;
@@ -138,7 +138,7 @@ h2 {
 }
 
 .questionnaire {
-      padding-top: 6vw;
+    padding-top: 6vw;
     display: flex;
 }
 
@@ -149,11 +149,54 @@ h2 {
 
 /*--------FILTER*/
 
+ul.filters {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 30vw;
+    font-family: var(--primary-font);
+    font-size: 1.1vw;
+}
+
+.filters li + li::before {
+    content: "|";
+    color: #A2A2A2;
+    margin-right: 4vw;
+    display: inline-block
+}
 
 
+/*--------MAIN */
+
+main {
+    padding: 0 8vw;
+}
+
+section {
+    grid-gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+article {
+    border-radius: 3px;
+
+    box-shadow: -webkit-box-shadow: 2px 2px 6px 4px rgba(199, 197, 199, 1);
+    -moz-box-shadow: 2px 2px 6px 4px rgba(199, 197, 199, 1);
+    box-shadow: 2px 2px 6px 4px rgba(199, 197, 199, 1);
+
+}
+
+.lifechangecard {
+    text-align: center;
+    padding-top: 4vw;
+
+}
 
 
+.product_image {}
 
-
-
-
+h2 {
+    padding-top: 2.5vw;
+    font-family: var(--secondary-font)
+}
