@@ -10,7 +10,7 @@
 
 
 
-fetch("http://www.a-day.dk/module-09/recreate/wp-json/wp/v2/property?_embed").then(r => r.json()).then(handleData)
+/*fetch("http://www.a-day.dk/module-09/recreate/wp-json/wp/v2/property?_embed").then(r => r.json()).then(handleData)
 
 
 function handleData(posts) {
@@ -37,4 +37,32 @@ function showPost(post) {
     copy.querySelector(".sqfeet").textContent = post.sq_feet;
 
     document.querySelector("main").appendChild(copy);
+}*/
+
+fetch("http://efcreations.es/t9w1/wp-json/wp/v2/change")
+    .then(initial => initial.json())
+    .then(callback);
+
+function callback(data) {
+    console.log(data)
+    data.forEach(showPost)
 }
+
+function showPost(post) {
+    console.log(post)
+    const template = document.querySelector("template#productTemplate").content;
+    const clone = template.cloneNode(true);
+
+    clone.querySelector(".data_title").textContent = post.bike_brand;
+    clone.querySelector(".data_shortdescription").textContent = post.model;
+    /*clone.querySelector(".price").textContent = "$" + post.price;
+    clone.querySelector(".colour").textContent = post.colour;
+    clone.querySelector(".in-stock").textContent = post.in_stock;*/
+
+    /*copy.querySelector(".content").innerHTML = post.content.rendered;*/
+
+    document.querySelector("main").appendChild(clone);
+}
+
+
+
