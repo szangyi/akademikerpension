@@ -55,13 +55,13 @@ function showPost(post) {
 
     copy.querySelector(".data_title").textContent = post.title.rendered;
     copy.querySelector(".data_shortdescription").textContent = post.short_description;
-    copy.querySelector(".product_image").src = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+    //copy.querySelector(".product_image").src = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
 
 
 
     /*copy.querySelector(".content").innerHTML = post.content.rendered;*/
 
-    document.querySelector("main").appendChild(clone);
+    document.querySelector("main").appendChild(copy);
 }
 
 
