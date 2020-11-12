@@ -41,9 +41,9 @@ function showPost(post) {
 
 fetch("http://efcreations.es/t9w1/wp-json/wp/v2/change")
     .then(initial => initial.json())
-    .then(callback);
+    .then(handleData);
 
-function callback(data) {
+function handleData(data) {
     console.log(data)
     data.forEach(showPost)
 }
@@ -51,13 +51,13 @@ function callback(data) {
 function showPost(post) {
     console.log(post)
     const template = document.querySelector("template#productTemplate").content;
-    const clone = template.cloneNode(true);
+    const copy = template.cloneNode(true);
 
-    clone.querySelector(".data_title").textContent = post.bike_brand;
-    clone.querySelector(".data_shortdescription").textContent = post.model;
-    /*clone.querySelector(".price").textContent = "$" + post.price;
-    clone.querySelector(".colour").textContent = post.colour;
-    clone.querySelector(".in-stock").textContent = post.in_stock;*/
+    copy.querySelector(".data_title").textContent = post.title.rendered;
+    copy.querySelector(".data_shortdescription").textContent = post.short_description;
+    copy.querySelector(".product_image").src = post._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+
+
 
     /*copy.querySelector(".content").innerHTML = post.content.rendered;*/
 
