@@ -9,6 +9,7 @@
     --color-green: #27736E;
     --color-orange: #F39945;
     --color-purple: #40407F;
+    --color-black: #000000;
 
 
     --primary-font: 'Montserrat', sans-serif;
@@ -34,7 +35,6 @@ li a {
 .icon {
     padding-right: 0.5vw;
     height: 1.5vw;
-
 }
 
 button.login {
@@ -46,6 +46,34 @@ button.login {
     border-radius: 50px;
     border: none;
 }
+
+
+.learnMore {
+  text-decoration: none;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: solid 1px black;
+  color: var(--color-black);
+  font-size: 18px;
+  padding: 6px 9px;
+  font-family: var(--primary-font);
+}
+
+
+article a {
+  text-decoration: none;
+  color: var(--color-black:);
+  transition: all 0.3s;
+}
+
+article a:hover {
+  text-decoration: none;
+  color: var(--color-black:);
+  transform: scale(1.2);
+}
+
 
 .nav1 {
     padding: 0.5vw 5vw;
@@ -99,6 +127,8 @@ button.login {
 }
 */
 
+
+
 h1 {
     font-family: var(--secondary-font);
     font-size: 5vw;
@@ -147,6 +177,13 @@ h5 {
     height: 3vw;
     vertical-align: middle;
 }
+
+.data_shortdescription {
+   font-family: var(--primary-font);
+    padding: 10px;
+}
+
+
 
 /*--------FILTER*/
 
