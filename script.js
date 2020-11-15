@@ -3,9 +3,21 @@ window.addEventListener('DOMContentLoaded', getData);
 const datalink = "http://efcreations.es/t9w1/wp-json/wp/v2/change?_embed";
 
 function getData() {
-    fetch(datalink)
-        .then(res => res.json())
-        .then(handleData);
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log("URLSearchParams " + window.location);
+    const the_change_id = urlParams.get("change_id"); //getting the id from the URL
+    console.log(the_change_id);
+
+    //routing in the script
+    if (the_change_id) {
+        fetch("http://efcreations.es/t9w1/wp-json/wp/v2/changes/" + the_change_id + "?_embed")
+            .then(res => res.json())
+            .then(showChange) //skipping the forEach loop
+    } else {
+        fetch(datalink)
+            .then(res => res.json())
+            .then(handleData)
+    }
 }
 
 
@@ -21,7 +33,7 @@ function handleData(data) {
 
 function showChange(change) {
     console.log(change)
-    const template = document.querySelector("template#productTemplate").content;
+    const template = document.querySelector("template").content;
     const copy = template.cloneNode(true);
     //console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
 
@@ -37,6 +49,11 @@ function showChange(change) {
         a.href += change.id;
     }
 
+
+    const divChangeLongDescription = copy.querySelector('#longdescription');
+    if (divChangeLongDescription) {
+        divChangeLongDescription.innerHTML = change.content.rendered;
+    }
 
     document.querySelector("main").appendChild(copy);
 }
