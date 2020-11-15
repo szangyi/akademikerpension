@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', getData);
 
 const datalink = "http://efcreations.es/t9w1/wp-json/wp/v2/change?_embed";
 
-function getData(){
+function getData() {
     fetch(datalink)
         .then(res => res.json())
         .then(handleData);
@@ -27,12 +27,16 @@ function showChange(change) {
 
     copy.querySelector(".data_title").textContent = change.title.rendered;
     copy.querySelector(".data_shortdescription").textContent = change.short_description;
-    copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
+    //copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
 
     /*copy.querySelector(".content").innerHTML = change.content.rendered;*/
 
+
+    const a = copy.querySelector('a');
+    if (a) {
+        a.href += change.id;
+    }
+
+
     document.querySelector("main").appendChild(copy);
 }
-
-
-
