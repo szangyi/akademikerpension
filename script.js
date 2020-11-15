@@ -25,8 +25,8 @@ function showChange(change) {
     const copy = template.cloneNode(true);
     //console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url)
 
-    copy.querySelector(".data_title").textContent = change.title.rendered;
-    copy.querySelector(".data_shortdescription").textContent = change.short_description;
+    copy.querySelector(".title").textContent = change.title.rendered;
+    copy.querySelector(".shortdescription").textContent = change.short_description;
     //copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url;
 
     /*copy.querySelector(".content").innerHTML = change.content.rendered;*/

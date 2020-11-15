@@ -178,7 +178,7 @@ h5 {
     vertical-align: middle;
 }
 
-.data_shortdescription {
+.shortdescription {
    font-family: var(--primary-font);
     padding: 10px;
 }
