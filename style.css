@@ -31,12 +31,14 @@ nav li {
     display: inline;
     text-align: center;
     padding: 2vw;
+
 }
 
 li a {
     text-decoration: none;
     font-family: var(--secondary-font);
     color: black;
+        font-weight: 500;
 }
 
 .icon {
@@ -139,6 +141,7 @@ h1 {
     font-family: var(--secondary-font);
     font-size: 5vw;
     margin: 0;
+    font-weight: 500;
 }
 
 .bannerleft {
@@ -164,6 +167,7 @@ h1 {
 
 #help {
     font-size: 1.5vw;
+    font-weight: 400;
 }
 
 h5 {
@@ -172,11 +176,13 @@ h5 {
     padding-right: 1vw;
     color: var(--color-orange);
     font-size: 2.5vw;
+        font-weight: 500;
 }
 
 .questionnaire {
     padding-top: 6vw;
     display: flex;
+
 }
 
 .orangearrow {
@@ -193,14 +199,18 @@ h5 {
 
 /*--------FILTER*/
 
+
+
 ul.filters {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding: 2vw 30vw;
+    padding: 3vw 30vw;
     font-family: var(--primary-font);
-    font-size: 1.1vw;
+    font-size: 1.3vw;
+
 }
+
 
 .filters li + li::before {
     content: "|";
@@ -217,7 +227,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 2rem;
-    padding: 0 8vw;
+    padding: 0 8vw 8vw 8vw;
 }
 
 #singlechange main {
@@ -298,7 +308,7 @@ h3 {
 }
 
 .fixtext {
-    padding: 8vw;
+    padding: 0 8vw 8vw 8vw;
 
 }
 
@@ -322,7 +332,7 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 5vw;
-    align-items: center;
+    /*    align-items: center;*/
     margin-top: 3vw;
 
 }
@@ -350,7 +360,7 @@ h3 {
     border-radius: 18px 0 18px 18px;
 }
 
-.loginblue{
+.loginblue {
     margin-top: 1.5vw;
     border: none;
     background-color: var(--color-purple);
@@ -366,6 +376,35 @@ h3 {
 }
 
 .callusgrid {
-        background-color: #ECEFF2;
+    background-color: #ECEFF2;
     border-radius: 18px 18px 18px 0px;
+}
+
+
+footer {
+
+    padding: 5vw 8vw;
+    background-color: var(--color-blue);
+
+
+}
+
+.footergrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.2fr;
+    grid-column-gap: 5vw;
+    margin-top: 3vw;
+        color: white;
+    font-family: var(--secondary-font);
+    line-height: 4vw;
+}
+
+.footerheadline {
+    font-size: 1.6vw;
+    font-weight: 600;
+    line-height: 2vw;
+}
+
+.logowhite {
+    width: 15vw;
 }
