@@ -4,12 +4,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-weight: 300;
 }
 
 :root {
     --color-green: #27736E;
     --color-orange: #F39945;
     --color-purple: #40407F;
+    --color-blue: #40617F;
     --color-black: #000000;
 
 
@@ -257,7 +259,7 @@ h2 {
 }
 
 .subpage-header {
-/*
+    /*
     display: grid;
     grid-template-columns: 5fr 3fr;
 */
@@ -266,6 +268,7 @@ h2 {
 div.subpage-header > h2 {
     text-transform: uppercase;
     font-size: 3.5vw;
+
 }
 
 div.subpage-header > div.shortdescription {
@@ -273,10 +276,11 @@ div.subpage-header > div.shortdescription {
     padding-top: 4vw;
     font-size: 1.5vw;
     width: 55%;
+    font-weight: 300;
 }
 
 div.subpage-header > img.product_image {
-/*    width: 40vw;*/
+    /*    width: 40vw;*/
 }
 
 h3 {
@@ -285,13 +289,83 @@ h3 {
     padding-bottom: 1vw;
 }
 
-.longdescription p{
+.longdescription p {
     font-family: var(--primary-font);
     font-size: 1.5vw;
     line-height: 3vw;
     padding-bottom: 2vw;
+    font-weight: 300;
 }
 
 .fixtext {
     padding: 8vw;
+
+}
+
+.fixtext_headline {
+    font-family: var(--secondary-font);
+    font-size: 1.8vw;
+    color: var(--color-blue);
+    font-weight: 400;
+    padding-bottom: 2vw;
+}
+
+.fixtext_p {
+    font-family: var(--primary-font);
+    font-size: 1.5vw;
+    font-weight: 300;
+    line-height: 3vw;
+
+}
+
+.fixtextgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5vw;
+    align-items: center;
+    margin-top: 3vw;
+
+}
+
+.gridcontent {
+    padding: 2vw 5vw;
+}
+
+.gridcontent p {
+    font-family: var(--primary-font);
+
+}
+
+.headline {
+    font-family: var(--secondary-font);
+    font-size: 1.6vw;
+    color: var(--color-blue);
+    font-weight: 400;
+    padding-bottom: 1.5vw;
+
+}
+
+.logingrid {
+    background-color: #ECEFF2;
+    border-radius: 18px 0 18px 18px;
+}
+
+.loginblue{
+    margin-top: 1.5vw;
+    border: none;
+    background-color: var(--color-purple);
+    color: white;
+    padding: 0.7vw 2vw;
+    font-family: var(--secondary-font);
+    border-radius: 18px 0 18px 18px;
+}
+
+.number {
+    color: #287671;
+    font-weight: 600;
+}
+
+.callusgrid {
+        background-color: #ECEFF2;
+    border-radius: 18px 18px 18px 0px;
 }
