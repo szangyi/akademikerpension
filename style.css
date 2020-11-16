@@ -54,29 +54,29 @@ button.login {
 
 
 .learnMore {
-  text-decoration: none;
-  display: block;
-  width: fit-content;
-  margin: 0 auto;
-  border-radius: 4px;
-  border: solid 1px black;
-  color: black;
-  font-size: 18px;
-  padding: 6px 9px;
-  font-family: var(--primary-font);
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: solid 1px black;
+    color: black;
+    font-size: 18px;
+    padding: 6px 9px;
+    font-family: var(--primary-font);
 }
 
 
 article a {
-  text-decoration: none;
-  color: var(--color-black:);
-  transition: all 0.3s;
+    text-decoration: none;
+    color: var(--color-black:);
+    transition: all 0.3s;
 }
 
 article a:hover {
-  text-decoration: none;
-  color: var(--color-black:);
-  transform: scale(1.2);
+    text-decoration: none;
+    color: var(--color-black:);
+    transform: scale(1.2);
 }
 
 
@@ -183,7 +183,7 @@ h5 {
 }
 
 .shortdescription {
-   font-family: var(--primary-font);
+    font-family: var(--primary-font);
     padding: 10px;
 }
 
@@ -218,15 +218,15 @@ main {
     padding: 0 8vw;
 }
 
-#singlechange main{
+#singlechange main {
     grid-template-columns: 1fr;
 }
 
 article {
     border-radius: 3px;
--webkit-box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
--moz-box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
-box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
+    -webkit-box-shadow: 2px 2px 6px 4px rgba(224, 224, 224, 1);
+    -moz-box-shadow: 2px 2px 6px 4px rgba(224, 224, 224, 1);
+    box-shadow: 2px 2px 6px 4px rgba(224, 224, 224, 1);
 }
 
 .lifechangecard {
@@ -248,3 +248,50 @@ h2 {
     color: white;
 }
 
+
+
+/*----------------SUBPAGE*/
+
+.subpage {
+    box-shadow: none;
+}
+
+.subpage-header {
+/*
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+*/
+}
+
+div.subpage-header > h2 {
+    text-transform: uppercase;
+    font-size: 3.5vw;
+}
+
+div.subpage-header > div.shortdescription {
+    padding: 0;
+    padding-top: 4vw;
+    font-size: 1.5vw;
+    width: 55%;
+}
+
+div.subpage-header > img.product_image {
+/*    width: 40vw;*/
+}
+
+h3 {
+    font-family: var(--secondary-font);
+    font-size: 3vw;
+    padding-bottom: 1vw;
+}
+
+.longdescription p{
+    font-family: var(--primary-font);
+    font-size: 1.5vw;
+    line-height: 3vw;
+    padding-bottom: 2vw;
+}
+
+.fixtext {
+    padding: 8vw;
+}
