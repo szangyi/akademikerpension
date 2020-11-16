@@ -218,6 +218,10 @@ main {
     padding: 0 8vw;
 }
 
+#singlechange main{
+    grid-template-columns: 1fr;
+}
+
 article {
     border-radius: 3px;
 -webkit-box-shadow: 2px 2px 6px 4px rgba(224,224,224,1);
