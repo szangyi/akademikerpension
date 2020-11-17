@@ -63,9 +63,9 @@ function showChange(change) {
 
     copy.querySelector(".title").textContent = change.title.rendered;
     copy.querySelector(".shortdescription").textContent = change.short_description;
-    //copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
     //copy.querySelector('article').style.backgroundImage = "url('https://it-studerende.dk/test/student.png')";
-    copy.querySelector('article').style.backgroundImage = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+//    copy.querySelector('article').style.backgroundImage = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
 
     /*copy.querySelector(".content").innerHTML = change.content.rendered;*/
 
