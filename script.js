@@ -38,24 +38,15 @@ function handleCategoryNavData(categories) {
 function addNavLink(oneCategory) {
     console.log("cat");
     //console.log(oneCategory);
+    //const li = document.createElement('li');
     const a = document.createElement('a');
     a.textContent = oneCategory.name;
     a.href = "category.html?cat_id=" + oneCategory.id;
     console.log(a);
+    //li.appendChild(a);
+    //document.querySelector(".filternav").appendChild(li);
     document.querySelector('section').appendChild(a);
 }
-
-/*function addNavLink(oneCategory) {
-    console.log("cat");
-    //console.log(oneCategory);
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.textContent = oneCategory.name;
-    a.href = "category.html?cat_id=" + oneCategory.id;
-    console.log(a);
-    li.appendChild(a);
-    document.querySelector(".filternav").appendChild(li);
-}*/
 
 
 function handleData(data) {
