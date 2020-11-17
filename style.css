@@ -387,6 +387,7 @@ article {
     transition: 1s all;
 }
 
+
 article h2 {
     transition: 2s all;
 }
@@ -428,6 +429,11 @@ h2 {
     background-color: rgba(200, 200, 200, 0.95);
     font-family: var(--primary-font);
     padding: 55px 10px 0px 10px;
+}
+
+
+.hidden {
+    display: none;
 }
 
 .shortdescription p {
