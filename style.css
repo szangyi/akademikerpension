@@ -182,15 +182,21 @@ h5 {
     text-transform: uppercase;
 }
 
-.filternav a + a::before {
+.filternav li + li::before {
     content: "|";
-    margin-right: 4vw;
 }
 
 .filternav a {
+    text-decoration: none;
     font-family: var(--primary-font);
     font-size: 1.3vw;
     color: #A2A2A2;
+}
+
+.filternav li {
+    display: inline;
+    text-align: center;
+    margin-right: 4vw;
 }
 
 
