@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', getData);
 const datalink = "http://efcreations.es/t9w1/wp-json/wp/v2/change?_embed";
 
 function getData() {
+    getNav()
     const urlParams = new URLSearchParams(window.location.search);
     console.log("URLSearchParams " + window.location);
     const the_change_id = urlParams.get("change_id"); //getting the id from the URL
@@ -24,11 +25,29 @@ function getData() {
     }
 }
 
+function getNav() {
+  fetch("http://efcreations.es/t9w1/wp-json/wp/v2/categories?parent=18&orderby=count&order=desc")
+    .then(res => res.json())
+    .then(handleCategoryNavData)
+}
 
-/*fetch("http://efcreations.es/t9w1/wp-json/wp/v2/change")
-    .then(initial => initial.json())
-    .then(handleData);
-*/
+function handleCategoryNavData(categories) {
+  categories.forEach(addNavLink);
+}
+
+function addNavLink(oneCategory) {
+  console.log("cat");
+  console.log(oneCategory);
+  const li = document.createElement('li');
+  const a = document.createElement('a');
+  a.href = "category.html?cat_id=" + oneCategory.id;
+  a.textContent = oneCategory.name;
+  console.log(a);
+  li.appendChild(a);
+  document.querySelector(".filternav").appendChild(li);
+}
+
+
 
 function handleData(data) {
     console.log(data);

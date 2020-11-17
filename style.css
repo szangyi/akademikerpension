@@ -173,28 +173,37 @@ h5 {
 /*--------FILTER*/
 
 
-
-ul.filters {
+.filternav {
     list-style: none;
     display: flex;
     justify-content: space-between;
     padding: 3vw 30vw;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.filternav li + li::before {
+    content: "|";
+    margin-right: 4vw;
+}
+
+.filternav a {
     font-family: var(--primary-font);
     font-size: 1.3vw;
-
+    color: #A2A2A2;
 }
 
 
-.filters li + li::before {
+/*.filternav li + li::before {
     content: "|";
     color: #A2A2A2;
     margin-right: 4vw;
     display: inline-block
-}
+}*/
+
 
 
 /*--------MAIN */
-
 
 main {
     display: grid;
@@ -206,9 +215,6 @@ main {
 #singlechange main {
     grid-template-columns: 1fr;
 }
-
-
-
 
 
 
@@ -402,7 +408,7 @@ h2 {
     bottom: 0;
     padding-bottom: 2vw;
     font-family: var(--secondary-font);
-    font-weight:400;
+    font-weight: 400;
 }
 
 
