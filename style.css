@@ -502,7 +502,7 @@ article a:hover {
 
 .lifechangecardhover {
     display: none;
-    background: rgba(52, 52, 52, 0.6);
+    background: rgba(52, 52, 52, 0.95);
     position: absolute;
     z-index: 2;
     animation-name: fade-in;
