@@ -15,8 +15,6 @@ function getData() {
             .then(res => res.json())
             .then(showChange) //skipping the forEach loop
     } else if (!the_change_id && window.location.pathname == "/singlechange.html") {
-        //alert("hello");
-        //https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
         window.location.replace("index.html");
     } else {
         fetch(datalink)
@@ -38,8 +36,6 @@ function handleCategoryNavData(categories) {
 }
 
 function addNavLink(oneCategory) {
-    //create another js just for categories and fetch from the link below
-
     /*console.log("cat", oneCategory);
     fetch("http://efcreations.es/t9w1/wp-json/wp/v2/categories/"+oneCategory.id)
         .then(res => res.json())
@@ -52,23 +48,24 @@ function addNavLink(oneCategory) {
     copy.querySelector('a').textContent = oneCategory.name;
     copy.querySelector('a').href = "category.html?cat_id=" + oneCategory.id;
     document.querySelector("#filtercontainer").appendChild(copy);
-
-    /*
-        const template = document.querySelector("#filterTemplate").content;
-    const copy = template.cloneNode(true);
-
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    copy.querySelector('a').textContent = oneCategory.name;
-    console.log(oneCategory.name)
-    copy.a.href = "category.html?cat_id=" + oneCategory.id;
-    console.log(a);
-    li.appendChild(a);
-    console.log(document.querySelector('section'))
-//    document.querySelector(".filterul").appendChild(li);
-    template.appendChild(li);
-    */
 }
+
+
+/*
+const template = document.querySelector("#filterTemplate").content;
+const copy = template.cloneNode(true);
+
+const li = document.createElement('li');
+const a = document.createElement('a');
+copy.querySelector('a').textContent = oneCategory.name;
+console.log(oneCategory.name)
+copy.a.href = "category.html?cat_id=" + oneCategory.id;
+console.log(a);
+li.appendChild(a);
+console.log(document.querySelector('section'))
+//document.querySelector(".filterul").appendChild(li);
+template.appendChild(li);
+*/
 
 
 //http://lasseclaes.com/20f/2nd_sem_int/wp/wp-json/wp/v2/bikes/?categories=7&_embed
@@ -84,16 +81,12 @@ function showChange(change) {
     //console.log(change.short_description)
     const template = document.querySelector("#changeTemplate").content;
     const copy = template.cloneNode(true);
-    console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)
+    //console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)
 
     copy.querySelector(".title").textContent = change.title.rendered;
     copy.querySelector(".title2").textContent = change.title.rendered;
     copy.querySelector(".shortdescription").textContent = change.short_description;
     copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
-    //copy.querySelector('article').style.backgroundImage = "url('https://it-studerende.dk/test/student.png')";
-    //copy.querySelector('article').style.backgroundImage = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
-
-    /*copy.querySelector(".content").innerHTML = change.content.rendered;*/
 
 
     const a = copy.querySelector('a');

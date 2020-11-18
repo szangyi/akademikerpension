@@ -15,8 +15,6 @@ function getData() {
             .then(res => res.json())
             .then(showChange) //skipping the forEach loop
     } else if (!the_change_id && window.location.pathname == "/singlechange.html") {
-        //alert("hello");
-        //https://stackoverflow.com/questions/503093/how-do-i-redirect-to-another-webpage
         window.location.replace("index.html");
     } else {
         fetch(datalink)
@@ -40,10 +38,10 @@ function handleCategoryNavData(categories) {
 function addNavLink(oneCategory) {
     //create another js just for categories and fetch from the link below
 
-    /*console.log("cat", oneCategory);
+    console.log("cat", oneCategory);
     fetch("http://efcreations.es/t9w1/wp-json/wp/v2/categories/"+oneCategory.id)
         .then(res => res.json())
-        .then((data)=>let categoryData=data)*/
+        .then((data)=>let categoryData=data)
     //console.log(oneCategory);
 
     const template = document.querySelector("#filterTemplate").content;
@@ -84,7 +82,7 @@ function showChange(change) {
     //console.log(change.short_description)
     const template = document.querySelector("#changeTemplate").content;
     const copy = template.cloneNode(true);
-    console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)
+    //console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)
 
     copy.querySelector(".title").textContent = change.title.rendered;
     copy.querySelector(".shortdescription").textContent = change.short_description;
