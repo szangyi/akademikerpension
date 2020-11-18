@@ -188,7 +188,9 @@ section.filtercontainer {
 
 .filternav li + li::before {
     content: "|";
-} /*this is not doing anything*/
+}
+
+/*this is not doing anything*/
 
 .filternav a {
     text-decoration: none;
@@ -548,14 +550,14 @@ article a:hover {
 
 .product_image {}
 
-.lifechangecardhover{
-    display:none;
+.lifechangecardhover {
+    display: none;
     background: rgba(52, 52, 52, 0.6);
-/*    color: white;*/
+    /*    color: white;*/
     position: absolute;
     z-index: 2;
 }
 
-.lifechangecard:hover span{
-    display:block;
+.lifechangecard:hover span {
+    display: block;
 }

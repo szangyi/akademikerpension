@@ -87,6 +87,7 @@ function showChange(change) {
     console.log(change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url)
 
     copy.querySelector(".title").textContent = change.title.rendered;
+    copy.querySelector(".title2").textContent = change.title.rendered;
     copy.querySelector(".shortdescription").textContent = change.short_description;
     copy.querySelector(".product_image").src = change._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
     //copy.querySelector('article').style.backgroundImage = "url('https://it-studerende.dk/test/student.png')";
