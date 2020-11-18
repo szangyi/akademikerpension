@@ -169,64 +169,40 @@ h5 {
 
 
 
-
 /*--------FILTER*/
 
-section.filtercontainer {
-    margin-left: 10vw;
-}
 
 .filternav {
     list-style: none;
-    /*display: flex;*/
+    display: flex;
     justify-content: space-between;
     padding: 3vw 3vw;
-    display: inline-block;
     text-transform: uppercase;
-    align-content: center;
-}
-
-.filternav li + li::before {
-    content: "|";
-}
-
-/*this is not doing anything*/
-
-.filternav a {
-    text-decoration: none;
-    font-family: var(--primary-font);
-    font-size: 1.3vw;
-    color: #A2A2A2;
+    margin: auto;
+    width: 50%;
 }
 
 .filternav li {
     display: inline;
-    text-align: center;
-    margin-right: 1vw;
 }
 
-/*ul.filterul {
-    display: flex;
-    align-items: stretch;
-}*/
-
-/*.filternav li {
-    display: grid;
-    text-align: center;
-    margin: 0.1em;
-    height: 3.5em;
-    flex: 1 1 auto;
-    }*/
-
-
-
-/*.filternav li + li::before {
+.filternav li + li::before {
     content: "|";
-    color: #A2A2A2;
-    margin-right: 4vw;
-    display: inline-block
-}*/
+     color: #A2A2A2;
+    margin: 4vw;
+    font-size: 1.5vw;
+}
 
+.filternav a {
+    font-family: var(--primary-font);
+    font-size: 1.3vw;
+    font-weight: 300;
+
+}
+
+.green {
+    color: var(--color-green);
+}
 
 
 /*--------MAIN */
