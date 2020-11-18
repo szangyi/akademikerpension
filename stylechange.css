@@ -103,8 +103,8 @@ button.login {
 }
 
 .product_banner {
-    margin: 0;
-    padding: 0;
+margin-top: -3vw;
+    margin-bottom: 5vw;
 }
 
 /* LATER
@@ -215,7 +215,10 @@ main {
 h3 {
     font-family: var(--secondary-font);
     font-size: 3vw;
+    font-weight: 500;
     padding-bottom: 1vw;
+    padding-top: 3vw;
+
 }
 
 .longdescription p {
